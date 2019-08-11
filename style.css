@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.yg-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #f9f9fc;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.yg-calendar__wrapper {
+    overflow: hidden;
+    display: block;
+    width: 420px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 0 13px 0 rgba(82, 63, 105, .05);
+    border-radius: 4px;
+}
+
+.yg-calendar-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #ebedf2;
+    padding: 20px;
+}
+
+.yg-calendar-header .date {
+    margin: 0;
+    padding: 0;
+    font: 300 28px 'Open Sans';
+    color: #2c3e50;
+}
+
+.yg-calendar-header .change-month {
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 30px;
+}
+
+.yg-calendar-header .change-month span {
+    display: block;
+    float: left;
+    width: 11px;
+    height: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.yg-calendar-body {
+    padding: 6px 0 25px 25px
+}
+
+.yg-calendar-body .week-days,
+.yg-calendar-body .week-dates {
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+.yg-calendar-body .week-days div {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 4px;
+    text-align: center;
+    font: 600 16px/45px 'Open Sans';
+    color: #48465b;
+}
+
+.yg-calendar-body .week-dates span {
+    display: block;
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 4px;
+    text-align: center;
+    font: 300 19px/45px 'Open Sans';
+    color: #74788d;
+    border: 1px solid #ebedf2;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.yg-calendar-body .week-dates span.disabled {
+    color: #b6bacc;
+    box-shadow: inset 0 0 1px 1px #f3f4f7;
+}
+
+.yg-calendar-body .week-dates span:not(.disabled):hover {
+    background: #cdd0dd;
+    box-shadow: inset 0 0 1px 1px #d9dce5,
+    0 1px 3px -1px #cdd0dd;
+}
+
+.yg-calendar-body .week-dates span:not(.active):hover {
+    background: #b9becf;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .18),
+    0 0 0 #cdd0dd;
+}
+
+.yg-calendar-body .week-dates span.today,
+.yg-calendar-body .week-dates span.today:hover,
+.yg-calendar-body .week-dates span.today:active {
+    color: #fff;
+    box-shadow: 0 0 4px 0 #1dc9b7;
+    background-color: #1dc9b7;
+    border-color: #1dc9b7;
+}
+
+.yg-calendar-body .week-dates span.prev-month,
+.yg-calendar-body .week-dates span.next-month,
+.yg-calendar-body .week-dates span.prev-month:hover,
+.yg-calendar-body .week-dates span.next-month:hover{
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: default;
+}
